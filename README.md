@@ -1,4 +1,4 @@
-# 💳 Credit Card Fraud Detection
+#  Credit Card Fraud Detection
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue?style=flat&logo=python)
 ![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange?style=flat&logo=jupyter)
@@ -9,19 +9,19 @@
 
 ---
 
-## 📌 Overview
+##  Overview
 
 Credit card fraud causes billions of dollars in financial losses every year. This project builds an end-to-end machine learning pipeline to detect fraudulent transactions from real-world anonymized credit card data. The pipeline addresses one of the most critical challenges in financial ML — **extreme class imbalance** — and evaluates multiple classification models optimized for fraud recall and precision, directly applicable to real banking and fintech systems.
 
 ---
 
-## 🎯 Problem Statement
+##  Problem Statement
 
 Given a dataset of credit card transactions, classify each transaction as **fraudulent (1)** or **legitimate (0)**. The dataset is heavily imbalanced — fraudulent transactions represent a tiny fraction of all records — making standard accuracy an insufficient metric. The goal is to maximize **fraud detection rate (Recall)** while keeping **false positives (False Positive Rate)** manageable, using techniques specifically designed for imbalanced classification problems.
 
 ---
 
-## 📂 Dataset Information
+##  Dataset Information
 
 - **Source:** [Kaggle — Credit Card Fraud Detection (ULB MLG)](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
 - **File:** `creditcard.csv`
@@ -32,7 +32,7 @@ Given a dataset of credit card transactions, classify each transaction as **frau
 
 ---
 
-## 🔄 Project Workflow
+##  Project Workflow
 
 ```
 Raw Data → EDA → Preprocessing → Baseline Model → SMOTE Resampling
@@ -52,7 +52,7 @@ Raw Data → EDA → Preprocessing → Baseline Model → SMOTE Resampling
 
 ---
 
-## 📊 Exploratory Data Analysis (EDA)
+##  Exploratory Data Analysis (EDA)
 
 Performed comprehensive EDA to understand data characteristics and inform modeling decisions:
 
@@ -73,7 +73,7 @@ Performed comprehensive EDA to understand data characteristics and inform modeli
 
 ---
 
-## 🤖 Model Development
+##  Model Development
 
 ### Models Trained
 
@@ -92,7 +92,7 @@ Instead of using the default 0.5 decision threshold, implemented a **threshold s
 
 ---
 
-## 📈 Evaluation Metrics
+##  Evaluation Metrics
 
 Standard accuracy is misleading on imbalanced datasets — a model predicting "legitimate" for all transactions would achieve ~99.8% accuracy while detecting zero fraud. The following metrics were used instead:
 
@@ -107,7 +107,7 @@ Standard accuracy is misleading on imbalanced datasets — a model predicting "l
 
 ---
 
-## 🏆 Results
+##  Results
 
 - **SMOTE** successfully balanced the training class distribution, enabling models to learn meaningful fraud patterns
 - **Threshold optimization** improved F1-Score over the default 0.5 threshold for both models
@@ -116,7 +116,7 @@ Standard accuracy is misleading on imbalanced datasets — a model predicting "l
 
 ---
 
-## 📉 Visualizations
+##  Visualizations
 
 | Visualization | Purpose |
 |---|---|
@@ -132,7 +132,7 @@ Standard accuracy is misleading on imbalanced datasets — a model predicting "l
 
 ---
 
-## 🧰 Technologies Used
+##  Technologies Used
 
 | Category | Tools |
 |---|---|
@@ -146,7 +146,7 @@ Standard accuracy is misleading on imbalanced datasets — a model predicting "l
 
 ---
 
-## ⚙️ Installation
+##  Installation
 
 ```bash
 # Clone the repository
@@ -159,7 +159,7 @@ pip install numpy pandas matplotlib seaborn scikit-learn xgboost imbalanced-lear
 
 ---
 
-## ▶️ How to Run
+##  How to Run
 
 1. Download the dataset from [Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud) and place `creditcard.csv` in the project directory
 2. Update the file path in the notebook:
@@ -174,7 +174,7 @@ pip install numpy pandas matplotlib seaborn scikit-learn xgboost imbalanced-lear
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 credit-card-fraud-detection/
@@ -186,7 +186,7 @@ credit-card-fraud-detection/
 
 ---
 
-## 💡 Key Learnings
+##  Key Learnings
 
 - Real-world financial datasets are severely imbalanced; accuracy alone is a misleading performance metric
 - SMOTE should be applied **only to training data** — applying it before splitting causes data leakage
@@ -197,7 +197,7 @@ credit-card-fraud-detection/
 
 ---
 
-## 🚀 Future Improvements
+##  Future Improvements
 
 - Integrate **SHAP values** for granular, instance-level model explainability
 - Experiment with **Isolation Forest** and **Autoencoders** for unsupervised anomaly detection
@@ -207,22 +207,6 @@ credit-card-fraud-detection/
 - Implement **cost-sensitive learning** to directly optimize business cost of false negatives vs. false positives
 
 ---
-
-## 🌟 Resume-Worthy Highlights
-
-- Engineered a complete fraud detection pipeline on 284,807 real-world credit card transactions, addressing extreme class imbalance using SMOTE oversampling to improve minority class recall
-- Applied Standard Scaling and stratified train-test splitting to ensure data integrity and prevent leakage during preprocessing
-- Conducted in-depth EDA using correlation heatmaps, box plots, and distribution analysis to uncover behavioral differences between fraudulent and legitimate transactions
-- Trained and compared Logistic Regression and XGBoost classifiers, implementing custom threshold optimization via F1-Score sweep to maximize fraud detection performance
-- Evaluated models using Precision, Recall, F1-Score, Confusion Matrix, ROC-AUC, and PR-AUC — selecting metrics appropriate for severe class imbalance
-- Generated and interpreted XGBoost feature importance rankings to identify the most predictive transaction attributes for fraud classification
-- Demonstrated end-to-end ML workflow — from raw data ingestion through EDA, preprocessing, modeling, threshold tuning, and multi-metric evaluation
-
----
-
-## 📝 Repository Description
-
-> An end-to-end machine learning pipeline for detecting credit card fraud on 284K+ real-world transactions. Addresses class imbalance with SMOTE, compares Logistic Regression and XGBoost with threshold optimization, and evaluates performance using ROC-AUC, PR-AUC, and F1-Score.
 
 ---
 
