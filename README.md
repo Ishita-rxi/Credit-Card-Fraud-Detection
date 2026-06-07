@@ -64,7 +64,7 @@ Performed comprehensive EDA to understand data characteristics and inform modeli
 
 ---
 
-## 🛠️ Data Preprocessing
+##  Data Preprocessing
 
 - **Feature-Target Split:** Separated feature matrix `X` (all columns except `Class`) and target vector `y` (`Class`)
 - **Standard Scaling:** Applied `StandardScaler` to normalize all features to zero mean and unit variance — critical for Logistic Regression convergence
